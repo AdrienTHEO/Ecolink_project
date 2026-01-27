@@ -11,35 +11,43 @@ const AuthPage: React.FC = () => {
     <div className="min-h-screen w-full flex flex-col md:flex-row font-sans">
       
       {/* --- SECTION GAUCHE (Image / Slogan) --- */}
-      <div className="w-full md:w-1/2 bg-[#4CAF50] flex flex-col items-center justify-center p-8 text-white relative">
-        <div className="max-w-md text-center flex flex-row items-center space-x-10">
-          {/* Emplacement Photo / Mockup Téléphone */} 
-          <div className="relative mx-auto w-64 md:w-80">
-             <img 
-               src="/HomeFirst/m1.png" 
-               alt="Ecolink App" 
-               className="w-full h-auto drop-shadow-2xl"
-             />
+<div className="w-full md:w-1/2 bg-[#4CAF50] flex flex-col items-center justify-center p-8 md:p-12 text-white relative">
+  
+  {/* Conteneur de contenu : Colonne sur mobile, Ligne sur desktop */}
+  <div className="max-w-2xl flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-10 text-center md:text-left">
+    
+    {/* Emplacement Photo / Mockup Téléphone */} 
+    <div className="relative w-48 sm:w-64 md:w-80 transition-all duration-500">
+       <img 
+         src="/HomeFirst/m1.png" 
+         alt="Ecolink App" 
+         className="w-full h-auto drop-shadow-2xl"
+       />
+    </div>
+    
+        {/* Logo et Slogan */}
+        <div className="flex flex-col items-center md:items-start space-y-4">
+          <div className="flex items-center space-x-3">
+            <div className="w-10 h-10 md:w-14 md:h-14 flex items-center justify-center">
+              <img 
+                src="/HomeFirst/logoT.png" 
+                alt="Ecolink Logo" 
+                className="w-full h-auto drop-shadow-lg"
+              /> 
+            </div>
+            {/* Taille de texte responsive : 3xl sur mobile, 5xl sur desktop */}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
+              Ecolink
+            </h1>
           </div>
           
-          {/* Logo et Slogan */}
-          <div className="flex flex-col items-center space-y-4 mt-12">
-            <div className="flex items-center space-x-3">
-              <div className="w-12 h-12  flex items-center justify-center">
-                    <img 
-               src="/HomeFirst/logoT.png" 
-               alt="Ecolink App" 
-               className="w-full h-auto drop-shadow-2xl"
-             /> 
-              </div>
-              <h1 className="text-5xl font-bold tracking-tight">Ecolink</h1>
-            </div>
-            <p className="text-xl italic font-light opacity-90">
-              Ecolink, une économie circulaire assurée
-            </p>
-          </div>
+          <p className="text-lg md:text-xl italic font-light opacity-90 max-w-70 md:max-w-none">
+            Ecolink, une économie circulaire assurée
+          </p>
         </div>
+
       </div>
+    </div>
 
       {/* --- SECTION DROITE (Formulaires) --- */}
       <div className="w-full md:w-1/2 bg-white flex flex-col items-center justify-center p-6 md:p-12 relative overflow-hidden">
