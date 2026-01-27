@@ -8,15 +8,15 @@ const HomeF: React.FC = () => {
 
 const Navigate = useNavigate();
   return (
-    <div className="relative min-h-screen w-full bg-[#27ae60] flex flex-col items-center justify-center overflow-hidden p-6 font-sans">
+    <div className="p-9 relative min-h-screen w-full bg-[#27ae60] flex flex-col items-center justify-center overflow-hidden  font-sans">
       
       {/* Container Principal */}
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-24">
         
         {/* Section Gauche: Les Téléphones (Visualisation de la solution numérique) */}
-        <div className="relative w-full max-w-125 flex justify-center items-end h-100 md:h-125">
+        <div className="relative w-full max-w-125 flex justify-center items-end h-900 md:h-125">
           {/* Grand Téléphone - Splash Screen  */}
-          <div className="relative z-10 w-64 md:w-80 transition-transform hover:scale-105 duration-500">
+          <div className="relative z-10  w-64 md:w-80 transition-transform hover:scale-105 duration-500">
             <img 
               src="/HomeFirst/m1.png" 
               alt="Ecolink Splash Screen" 
