@@ -7,7 +7,7 @@ const collectors = [
   {
     id: 1,
     name: "Laptop",
-    realName: "Pk17",
+    realName: "Pk19",
     location: "Douala, Akwa",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400",
     rating: 4.9,
@@ -18,8 +18,8 @@ const collectors = [
   {
     id: 2,
     name: "Perig",
-    realName: "Deido",
-    location: "Douala, Deido",
+    realName: "Bonamoussadi",
+    location: "Douala, Bonamoussadi",
     avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400",
     rating: 4.8,
     collections: 980,
@@ -40,7 +40,7 @@ const collectors = [
   {
     id: 4,
     name: "Adrien",
-    realName: "Bonamoussadi",
+    realName: "pk8",
     location: "Douala, Bonamoussadi",
     avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400",
     rating: 4.7,
@@ -50,7 +50,7 @@ const collectors = [
   },
   {
     id: 5,
-    name: "Junior",
+    name: "Emmanuel",
     realName: "Akwa",
     location: "Douala, Akwa",
     avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400",
@@ -62,8 +62,19 @@ const collectors = [
   {
     id: 6,
     name: "Ivan",
-    realName: "Ndokotti",
+    realName: "pk17",
     location: "Douala, Ndokotti",
+    avatar: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=400",
+    rating: 4.6,
+    collections: 743,
+    verified: true,
+    specialty: "Textile"
+  },
+  {
+    id: 6,
+    name: "Yengue",
+    realName: "Campus PK17",
+    location: "Douala, PK17",
     avatar: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=400",
     rating: 4.6,
     collections: 743,
