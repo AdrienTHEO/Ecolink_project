@@ -1,5 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 const Hero: React.FC = () => {
+
+  const Navigate=useNavigate();
+
+
   return (
     <section className="relative w-full">
       {/* Bannière Verte Supérieure (selon ta 2ème capture) */}
@@ -10,10 +15,10 @@ const Hero: React.FC = () => {
         </div>
         
         <div className="flex space-x-6">
-          <button className="px-8 py-3 bg-gray-200 text-gray-800 rounded-lg text-xl font-medium hover:bg-white transition">
+          <button onClick={()=>{ Navigate('/auth')}} className="px-8 py-3 bg-gray-200 text-gray-800 rounded-lg text-xl font-medium hover:bg-white transition">
             Connexion
           </button>
-          <button className="px-8 py-3 bg-[#333333] text-white rounded-lg text-xl font-medium hover:bg-black transition">
+          <button onClick={()=>{ Navigate('/auth')}}  className="px-8 py-3 bg-[#333333] text-white rounded-lg text-xl font-medium hover:bg-black transition">
             S'inscrire
           </button>
         </div>
