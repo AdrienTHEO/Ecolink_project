@@ -6,6 +6,11 @@ import FormationPage from "./pages/Formation/Formation";
 import SubscriptionPage from "./pages/SubscriptionPage/SubscriptionPage";
 import AboutPage from "./pages/AboutPage/AboutPage";
 import ContactPage from "./pages/ContactPage/ContactPage";
+import HomeDashboard from "./pages/Dashboards/HomeDashboard/HomeDashboard";
+import HeroDashboard from "./pages/Dashboards/SECTION/HeroDasboard/HeroDasboard";
+import FormationDashboard from "./pages/Dashboards/SECTION/Formation/FormationPage";
+import CourseDetail from "./pages/Dashboards/SECTION/Formation/CourseDetail";
+import Marketplace from "./pages/Dashboards/SECTION/MarketPlace/Marketplace";
 
 function App() {
   return (
@@ -18,7 +23,14 @@ function App() {
         <Route path="/sub" element={<SubscriptionPage />} />
         <Route path="/about" element={<AboutPage />} /> 
         <Route path="/contact" element={<ContactPage />} /> 
-      </Routes>
+        <Route path="/dashboard" element={<HomeDashboard />}>
+        <Route index element={<HeroDashboard/> } />
+        <Route path="formations" element={< FormationDashboard />} />
+        <Route path="formations/:courseId" element={<CourseDetail />} />
+        <Route path="marketplace" element={<Marketplace />} />
+        
+       </Route>
+       </Routes>
     </BrowserRouter>
   );
 }

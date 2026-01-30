@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import { User, Mail, Phone, Key } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const AuthPage: React.FC = () => {
   const [isLogin, setIsLogin] = useState(false); // Mis à false pour montrer l'inscription par défaut comme sur ton image
   const [userType, setUserType] = useState('menage');
 
   const toggleAuth = () => setIsLogin(!isLogin);
+  const Navigate = useNavigate();
+
 
   return (
     <div className="min-h-screen w-full flex flex-col md:flex-row font-sans">
@@ -139,7 +142,10 @@ const AuthPage: React.FC = () => {
 
         {/* --- PIED DE FORMULAIRE (Boutons) --- */}
         <div className="w-full max-w-md mt-10 flex flex-col items-center space-y-4">
-          <button className="w-full py-4 bg-linear-to-r from-[#4CAF50] to-[#81C784] text-white text-xl font-bold rounded-3xl shadow-lg hover:scale-105 transition-transform active:scale-95">
+          <button onClick={()=>{
+            Navigate('/dashboard')
+          }} 
+          className="w-full py-4 bg-linear-to-r from-[#4CAF50] to-[#81C784] text-white text-xl font-bold rounded-3xl shadow-lg hover:scale-105 transition-transform active:scale-95">
             {isLogin ? 'Connexion' : 'Inscription'}
           </button>
           
