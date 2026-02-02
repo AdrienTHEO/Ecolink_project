@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
             <img 
               src="/HomeFirst/HomeI.png" 
               alt="Main Phone" 
-              className="h-full w-full" 
+              className="h-full w-full"
             />
            
         </div>

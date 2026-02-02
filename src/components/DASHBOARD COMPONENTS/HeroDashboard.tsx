@@ -1,5 +1,6 @@
 import React from 'react';
 import { Camera, MapPin, TrendingUp, Leaf, Award, ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const HeroDashboardComponent: React.FC = () => {
   // Ces données viendront plus tard de ton backend/state
@@ -8,7 +9,7 @@ const HeroDashboardComponent: React.FC = () => {
     { label: 'Points Verts', value: '1,250', icon: <Award className="text-orange-600" />, color: 'bg-orange-100' },
     { label: 'Impact CO2', value: '-14 kg', icon: <TrendingUp className="text-blue-600" />, color: 'bg-blue-100' },
   ];
-
+  const Navigate = useNavigate();
   return (
     <div className="w-full bg-gray-50 p-4 md:p-8 space-y-8">
       
@@ -23,7 +24,7 @@ const HeroDashboardComponent: React.FC = () => {
               Prêt à transformer vos déchets en opportunités aujourd'hui ? 
               Utilisez notre IA pour identifier vos objets.
             </p>
-            <button className="flex items-center space-x-2 bg-white text-[#27ae60] px-6 py-3 rounded-2xl font-bold hover:bg-green-50 transition-all shadow-md group">
+            <button onClick={()=>{Navigate('/dashboard/formations')}} className="flex items-center space-x-2 bg-white text-[#27ae60] px-6 py-3 rounded-2xl font-bold hover:bg-green-50 transition-all shadow-md group">
               <Camera size={20} />
               <span> Regardez Nos Formations Disponible </span>
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />

@@ -11,6 +11,8 @@ import HeroDashboard from "./pages/Dashboards/SECTION/HeroDasboard/HeroDasboard"
 import FormationDashboard from "./pages/Dashboards/SECTION/Formation/FormationPage";
 import CourseDetail from "./pages/Dashboards/SECTION/Formation/CourseDetail";
 import Marketplace from "./pages/Dashboards/SECTION/MarketPlace/Marketplace";
+import CarteInteractive from "./pages/Dashboards/SECTION/Carte interactif/CarteInteractive";
+import CollecteursPage from "./pages/Dashboards/SECTION/CollecteurPage/CollecteursPage";
 
 function App() {
   return (
@@ -23,12 +25,14 @@ function App() {
         <Route path="/sub" element={<SubscriptionPage />} />
         <Route path="/about" element={<AboutPage />} /> 
         <Route path="/contact" element={<ContactPage />} /> 
+
         <Route path="/dashboard" element={<HomeDashboard />}>
-        <Route index element={<HeroDashboard/> } />
-        <Route path="formations" element={< FormationDashboard />} />
-        <Route path="formations/:courseId" element={<CourseDetail />} />
-        <Route path="marketplace" element={<Marketplace />} />
-        
+                <Route index element={<HeroDashboard/> } />
+                <Route path="formations" element={< FormationDashboard />} />
+                <Route path="formations/:courseId" element={<CourseDetail />} />
+                <Route path="marketplace" element={<Marketplace />} />
+                <Route path="map" element={<CarteInteractive/>} />
+                <Route path="collectors" element={<CollecteursPage/>} />
        </Route>
        </Routes>
     </BrowserRouter>
