@@ -79,7 +79,7 @@ const AuthPage: React.FC = () => {
 
               {/* Bouton Inscription spécifique */}
               <div className="pt-4 space-y-4">
-                <button onClick={() => navigate('/dashboard')} className="w-full py-4 bg-gradient-to-r from-[#4CAF50] to-[#81C784] text-white text-xl font-bold rounded-3xl shadow-lg hover:scale-[1.02] transition-transform">
+                <button onClick={() => navigate('/dashboard')} className="w-full py-4 bg-linear-to-r from-[#4CAF50] to-[#81C784] text-white text-xl font-bold rounded-3xl shadow-lg hover:scale-[1.02] transition-transform">
                   Inscription
                 </button>
                 <p onClick={toggleAuth} className="text-center text-sm text-gray-400 cursor-pointer hover:text-[#4CAF50]">Déjà inscrit ? Se connecter</p>
@@ -106,7 +106,7 @@ const AuthPage: React.FC = () => {
 
                {/* Bouton Connexion spécifique - Il sera beaucoup plus haut car il suit le contenu */}
                <div className="space-y-4">
-                  <button onClick={() => navigate('/dashboard')} className="w-full py-4 bg-gradient-to-r from-[#4CAF50] to-[#81C784] text-white text-xl font-bold rounded-3xl shadow-lg hover:scale-[1.02] transition-transform">
+                  <button onClick={() => navigate('/dashboard')} className="w-full py-4 bg-linear-to-r from-[#4CAF50] to-[#81C784] text-white text-xl font-bold rounded-3xl shadow-lg hover:scale-[1.02] transition-transform">
                     Connexion
                   </button>
                   <p onClick={toggleAuth} className="text-center text-sm text-gray-400 cursor-pointer hover:text-[#4CAF50]">Pas de compte ? S'inscrire</p>

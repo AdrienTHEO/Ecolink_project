@@ -98,7 +98,7 @@ const HeaderDashboard = () => {
                     <p className="text-xs text-gray-500">adrientamba@ecolink.cm</p>
                   </div>
                   <button 
-                    onClick={() => handleNavigate('/dashboard/profile')}
+                    onClick={() => handleNavigate('/dashboard/profil')}
                     className="w-full text-left px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50"
                   >
                     Mon Profil
@@ -154,7 +154,7 @@ const HeaderDashboard = () => {
                   <p className="text-xs text-gray-600">adrientamba@ecolink.cm</p>
                 </div>
                 {/* Notifications badge mobile */}
-                <button className="relative p-2 text-gray-600 hover:bg-white/50 rounded-full transition-colors">
+                <button   onClick={() => handleNavigate('/dashboard/profil')} className="relative p-2 text-gray-600 hover:bg-white/50 rounded-full transition-colors">
                   <Bell className="w-5 h-5" />
                   {hasNotifications && (
                     <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-red-500 rounded-full border border-white"></span>
