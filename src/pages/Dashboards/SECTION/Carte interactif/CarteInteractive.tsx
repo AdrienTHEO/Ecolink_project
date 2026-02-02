@@ -435,46 +435,49 @@ const CarteInteractive: React.FC = () => {
         </div>
 
         {/* Filters */}
-        <div className="mb-6 flex items-center gap-3">
-          <div className="flex items-center gap-2 text-gray-700 mr-2">
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
-            </svg>
-          </div>
-          
-          <button
-            onClick={() => setActiveFilter('all')}
-            className={`px-5 py-2.5 rounded-lg font-semibold transition-all text-sm ${
-              activeFilter === 'all'
-                ? 'bg-emerald-500 text-white'
-                : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
-            }`}
-          >
-            🗺️ Tout afficher
-          </button>
+        {/* On ajoute 'overflow-x-auto' pour le scroll mobile et 'whitespace-nowrap' pour éviter que le texte revienne à la ligne */}
+            <div className="mb-6 flex items-center gap-3 overflow-x-auto pb-2 scrollbar-hide">
+            <div className="flex items-center gap-2 text-gray-700 sticky left-0 bg-white/80 backdrop-blur-sm pr-2 z-10">
+                <svg className="w-5 h-5 min-w-[20px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+                </svg>
+            </div>
+            
+            <div className="flex gap-2 flex-nowrap">
+                <button
+                onClick={() => setActiveFilter('all')}
+                className={`px-4 py-2.5 rounded-xl font-bold transition-all text-xs md:text-sm whitespace-nowrap shadow-sm border ${
+                    activeFilter === 'all'
+                    ? 'bg-emerald-500 text-white border-emerald-500'
+                    : 'bg-white text-gray-600 border-gray-100 hover:bg-gray-50'
+                }`}
+                >
+                🗺️ Tout afficher
+                </button>
 
-          <button
-            onClick={() => setActiveFilter('collectors')}
-            className={`px-5 py-2.5 rounded-lg font-semibold transition-all text-sm ${
-              activeFilter === 'collectors'
-                ? 'bg-gray-200 text-gray-900'
-                : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
-            }`}
-          >
-            👥 Collecteurs
-          </button>
+                <button
+                onClick={() => setActiveFilter('collectors')}
+                className={`px-4 py-2.5 rounded-xl font-bold transition-all text-xs md:text-sm whitespace-nowrap shadow-sm border ${
+                    activeFilter === 'collectors'
+                    ? 'bg-gray-900 text-white border-gray-900'
+                    : 'bg-white text-gray-600 border-gray-100 hover:bg-gray-50'
+                }`}
+                >
+                👥 Collecteurs
+                </button>
 
-          <button
-            onClick={() => setActiveFilter('points')}
-            className={`px-5 py-2.5 rounded-lg font-semibold transition-all text-sm ${
-              activeFilter === 'points'
-                ? 'bg-gray-200 text-gray-900'
-                : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
-            }`}
-          >
-            📍 Points de collecte
-          </button>
-        </div>
+                <button
+                onClick={() => setActiveFilter('points')}
+                className={`px-4 py-2.5 rounded-xl font-bold transition-all text-xs md:text-sm whitespace-nowrap shadow-sm border ${
+                    activeFilter === 'points'
+                    ? 'bg-gray-900 text-white border-gray-900'
+                    : 'bg-white text-gray-600 border-gray-100 hover:bg-gray-50'
+                }`}
+                >
+                📍 Points de collecte
+                </button>
+            </div>
+            </div>
 
         {/* Main Content - Two Columns */}
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-6">
